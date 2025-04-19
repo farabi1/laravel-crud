@@ -15,8 +15,9 @@ class FrontendController extends Controller
         return view('frontend.pages.home',compact('products'));
     }
 
-    public function productdetails(){
-        $productdetails=Product::where('id',1)->first();
+    public function productdetails($id){
+       dd($id);
+        $productdetails=Product::where('id',$id)->first();
         dd($productdetails);
         return view('frontend.pages.product.productdetails',compact('productdetails'));
     }

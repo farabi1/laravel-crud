@@ -12,7 +12,7 @@ use App\Http\Controllers\ReviewController as ProductReviewController;
 //     return view('welcome');
 // });
 Route::get('/',[FrontendController::class,'index'])->name('home');
-Route::get('productdetails',[FrontendController::class,'productdetails']);
+Route::get('productdetails/{id}',[FrontendController::class,'productdetails']);
 
 
 // Route::resource('products', ProductController::class);
