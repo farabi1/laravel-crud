@@ -16,10 +16,10 @@ class FrontendController extends Controller
     }
 
     public function productdetails($id){
-       dd($id);
-        $productdetails=Product::where('id',$id)->first();
-        dd($productdetails);
-        return view('frontend.pages.product.productdetails',compact('productdetails'));
+       
+        $productdetail=Product::where('id',$id)->first();
+        
+        return view('frontend.pages.product.productdetails',compact('productdetail'));
     }
 
 }
