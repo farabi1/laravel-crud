@@ -8,6 +8,7 @@ class FrontendController extends Controller
 {
     public function home(){
         return view('welcome');
+        
     }
     public function index(){
         $products=Product::get();
