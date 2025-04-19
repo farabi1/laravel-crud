@@ -29,13 +29,15 @@
     <div class="row">
     @foreach ($products as $item )
         <div class="col-md-4">
-            <div class="card" style="width: 18rem; padding-top: 16px;">
+            <a href="{{ url('/productdetails') }}">
+                <div class="card" style="width: 18rem; padding-top: 16px;">
                 <img src="https://picsum.photos/500/500" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h1 class="card-heading">{{ $item->name }}</h1>
                 <p>{{ $item->details }}</p>
                 </div>
-            </div>
+                </div>
+            </a>
         </div>
         @endforeach
     </div>

@@ -8,7 +8,7 @@ class FrontendController extends Controller
 {
     public function home(){
         return view('welcome');
-        
+
     }
     public function index(){
         $products=Product::get();
@@ -16,7 +16,8 @@ class FrontendController extends Controller
     }
 
     public function productdetails(){
-        $productdetails=Product::get();
+        $productdetails=Product::where('id',1)->first();
+        dd($productdetails);
         return view('frontend.pages.product.productdetails',compact('productdetails'));
     }
 
